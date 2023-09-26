@@ -2,9 +2,9 @@ import hashlib
 import random
 
 # Genera 100 contraseñas de 7 letras aleatorias
-passwords = []
+passwords =[]
 for i in range(100):
-    password = ''.join(random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ') for j in range(7))
+    password = ''.join(random.choice('0123456789') for j in range(7))
     passwords.append(password)
 
 # Hasheas las contraseñas usando md5

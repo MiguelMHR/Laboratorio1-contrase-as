@@ -1,10 +1,12 @@
 import hashlib
 import random
+import string 
 
-# Genera 100 contraseñas de 4 numeros aleatorias
+# Genera 100 contraseñas de combinando 4 numeros y letras aleatorias
 passwords =[]
 for i in range(100):
-    password = ''.join(random.choice('0123456789') for j in range(4))
+    caracteres = string.ascii_letters + string.digits  # Combina letras (mayúsculas y minúsculas) y dígitos
+    password = ''.join(random.choice(caracteres) for j in range(4))
     passwords.append(password)
 
 # Hasheas las contraseñas usando md5
