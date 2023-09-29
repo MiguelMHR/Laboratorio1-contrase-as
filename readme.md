@@ -4,7 +4,7 @@
 
 1. Debemos instalar python3 en Linux con el siguiente comando
 
-    `sudo apt install python3 && sudo apt install python3-pip`
+   `sudo apt install python3 && sudo apt install python3-pip`
 2. Debemos instalar las librerías del archivo requirements.txt
 
-   `pip install requirements`
+   `pip install -r requirements.txt`
