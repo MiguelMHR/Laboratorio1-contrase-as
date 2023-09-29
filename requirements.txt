@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.2
+decorator==5.1.1
+dogpile.cache==1.2.2
+pbr==5.11.1
+pycryptodome==3.19.0
+pyrae==0.1.4
+soupsieve==2.5
+stevedore==5.1.0
