@@ -9,7 +9,7 @@ from Crypto.Protocol.KDF import bcrypt
 from base64 import b64encode
 
 # Variables globales:
-letras_minusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYXZ'
+letras_mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYXZ'
 passwords = []
 hashed_passwords = []
 
@@ -18,7 +18,7 @@ for i in range(100):
     pw = ''
     for j in range(7):
         random_letter_pos = random.randint(0, 25)
-        pw += letras_minusculas[random_letter_pos]
+        pw += letras_mayusculas[random_letter_pos]
     passwords.append(pw)
 
 """ 
