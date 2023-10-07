@@ -4,9 +4,7 @@ Dataset de contraseñas de 3 letras mayúsculas
 
 # Librerías necesarias:
 import random
-from Crypto.Hash import MD5
-from Crypto.Protocol.KDF import bcrypt
-from base64 import b64encode
+import hashlib
 
 # Variables globales:
 letras_mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYXZ'
@@ -21,20 +19,11 @@ for i in range(100):
         pw += letras_mayusculas[random_letter_pos]
     passwords.append(pw)
 
-""" 
-Hasheas las contraseñas usando MD5:
-➡️ Usando bcrypt te genera un salt aleatorio
-"""
+# Hasheas las contraseñas usando MD5:
 for password in passwords:
-    # Generamos en hash en base64 (bytestring) para que bcrypt pueda aplicar el salt
-    # Además, el password se pasa previamente a bytestring para que se pueda aplicar
-    # la función MD5
-    hashed_password = b64encode(MD5.new(password.encode('utf-8')).digest())
-    # Aplicamos bcrypt para generar el salt aleatorio (generado en cada uso de bcrypt) 
-    # y el hash final
-    # NOTA: En la documentación, se recomienda usar un cost de 12 
-    bcrypt_hashed_password = bcrypt(hashed_password, 12)
-    hashed_passwords.append(bcrypt_hashed_password.decode('utf-8'))
+    enc_password = password.encode('utf-8')
+    hashed_password = hashlib.md5(enc_password).hexdigest()
+    hashed_passwords.append(hashed_password)
 
 # Escribimos las contraseñas originales en un txt
 with open('passwords.txt', 'w') as f:
