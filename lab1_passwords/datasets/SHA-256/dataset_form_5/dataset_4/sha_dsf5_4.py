@@ -46,7 +46,7 @@ with open('passwords.txt', 'w') as f:
     for password in passwords:
         f.write(password + '\n')
 
-# Escribimos los hashes con salt en un txt
+# Escribimos los hashes en un txt
 with open('hashed_passwords.txt', 'w') as f:
     for hashed_password in hashed_passwords:
         f.write(hashed_password + '\n')
