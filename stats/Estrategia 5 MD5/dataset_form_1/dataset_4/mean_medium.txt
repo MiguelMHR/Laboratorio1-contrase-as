@@ -1,0 +1,2 @@
+Percentage of cracked passwords: 0.0%
+No times found in the log.

@@ -1,0 +1,4 @@
+Passwords cracked: 40 / 100
+Percentage of cracked passwords: 40.0%
+Average time taken (seconds): 0.0
+Median time taken (seconds): 0.0
