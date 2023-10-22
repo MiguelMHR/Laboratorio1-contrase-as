@@ -1,4 +1,4 @@
-# Laboratorio 1 - Contraseñas - Ingeniería de Ciberseguridad
+# Laboratorio 1 - Contraseñas - Ingeniería de la Ciberseguridad
 
 ## Como instalar las librerías de nuestro trabajo
 
