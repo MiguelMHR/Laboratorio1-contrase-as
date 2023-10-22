@@ -1,5 +1,4 @@
 import os
-import re
 import sys
 
 def analyze_john_output(filename, total_passwords=100):
